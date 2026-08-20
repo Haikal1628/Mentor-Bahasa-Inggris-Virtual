@@ -4,6 +4,15 @@ load_dotenv()
 
 import os
 
+from pathlib import Path
+
+SCR_DIR = Path(__file__).resolve().parent.parent  # src
+
+INSTRUCTIONS_DIR = SCR_DIR / "agents" / "instructions"  # src/agents/instructions
+
+DOCS_DIR = SCR_DIR / "docs"  # src/docs
+
+OUTPUT_DIR = SCR_DIR / "output"  # src/output
 
 def _required_env(name: str) -> str:
     """Ambil env wajib. apabila gagal, tampilkan pesan error"""
